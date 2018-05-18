@@ -23,12 +23,55 @@ public class Electrodomestico {
     private static final double PRECIO_BASE=100;
     private static final Color COLOR=Color.BLANCO;
     private static final char CONSUMO=100;
-    private static final double PESO=100;
+    private static final double PESO=5;
     
     
     private double precio_base;
-    private String color;
+    private Color color;
     private char consumo;
     private double peso; 
+
+    public Electrodomestico() {
+        this.precio_base=PRECIO_BASE;
+        this.color=COLOR;
+        this.consumo=CONSUMO;
+        this.peso=PESO;
+    }
+
+    public Electrodomestico(double precio_base, double peso) {
+        this.precio_base = precio_base;
+        this.peso = peso;
+        this.color=COLOR;
+        this.consumo=CONSUMO;
+    }
+
+    public Electrodomestico(double precio_base, Color color, char consumo, double peso) {
+        this.precio_base = precio_base;
+        this.color = color;
+        this.consumo = consumo;
+        this.peso = peso;
+    }
+
+    public double getPrecio_base() {
+        return precio_base;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public char getConsumo() {
+        return consumo;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+    
+    
+    
+    
+    
+    
     
 }
