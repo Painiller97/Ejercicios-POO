@@ -32,4 +32,16 @@ public class Lavadora extends Electrodomestico {
         this(PRECIO, PESO, CONSUMO, COLOR, CARGA);
     }
 
+    public int getCarga() {
+        return carga;
+    }
+
+    public double precioFinal(double añadir){
+       
+        if (carga>30){
+            añadir+=50;
+        }
+  
+        return añadir;
+    }
 }
