@@ -13,10 +13,10 @@ public class Electrodomestico {
 
  
 
-    private static final double PRECIO_BASE = 100;
-    private static final String COLOR = "BLANCO";
-    private static final char CONSUMO = 'F';
-    private static final double PESO = 5;
+    static final double PRECIO = 100;
+    static final String COLOR = "BLANCO";
+    static final char CONSUMO = 'F';
+    static final double PESO = 5;
 
     private double precio_base;
     private String color;
@@ -24,7 +24,7 @@ public class Electrodomestico {
     private double peso;
 
     public Electrodomestico() {
-        this.precio_base = PRECIO_BASE;
+        this.precio_base = PRECIO;
         this.color = color;
         this.consumo = CONSUMO;
         this.peso = PESO;
@@ -78,6 +78,10 @@ public class Electrodomestico {
         else{
             this.color = COLOR;
         }
+    }
+    
+    public void precioFinal(){
+        //aquí tendría que solucionar lo del equals con char
     }
 
 }
