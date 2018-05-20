@@ -9,7 +9,7 @@ package ejercicio4poo;
  *
  * @author Pues4Aula4
  */
-public class Ejercicio4POO {
+public class Main {
 
     /**
      * @param args the command line arguments

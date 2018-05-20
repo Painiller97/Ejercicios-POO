@@ -22,7 +22,7 @@ public class Electrodomestico {
     
     private static final double PRECIO_BASE=100;
     private static final Color COLOR=Color.BLANCO;
-    private static final char CONSUMO=100;
+    private static final char CONSUMO='F';
     private static final double PESO=5;
     
     
@@ -67,7 +67,17 @@ public class Electrodomestico {
     public double getPeso() {
         return peso;
     }
+
+    @Override
+    public String toString() {
+        return "Electrodomestico{" + "precio_base=" + precio_base + ", color=" + color + ", consumo=" + consumo + ", peso=" + peso + '}';
+    }
     
+    public void comprobarConsumoEnergetico(char letra){
+        if (letra.equals('A')){
+            //no deja comprobar que sea igual a A
+        }
+    }
     
     
     
