@@ -65,12 +65,14 @@ public class Electrodomestico {
         return "Electrodomestico{" + "precio_base=" + precio_base + ", color=" + color + ", consumo=" + consumo + ", peso=" + peso + '}';
     }
 
-    public void comprobarConsumoEnergetico(char letra) {
-        //if (letra.equals('A')) {
-            //no deja comprobar que sea igual a A
-        //}
+    public void comprobarConsumoEnergetico(char consumo) {
+        if (this.consumo==consumo) {
+            System.out.println("El consumo es de tipo "+consumo);
+        }else{
+            System.out.println("El consumo no es de tipo "+consumo);
+        }
     }
-
+    
     public void comprobarColor(String color) {
         if (color.equals("BLANCO") || color.equals("NEGRO") || color.equals("ROJO") || color.equals("AZUL") || color.equals("GRIS")) {
             this.color = color;
