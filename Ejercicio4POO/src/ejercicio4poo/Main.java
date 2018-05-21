@@ -43,6 +43,10 @@ public class Main {
                 sumaT += lista[i].precioFinal();
             }
         }
+        
+        System.out.println("El precio de la tele es de " + sumaT);
+        System.out.println("El precio de la lavadora es de " + sumaL);
+        System.out.println("El precio del electrodomestico es de " + sumaE);
     }
 
 }
