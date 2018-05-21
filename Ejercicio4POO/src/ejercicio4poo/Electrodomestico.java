@@ -35,7 +35,7 @@ public class Electrodomestico {
         this.consumo = CONSUMO;
     }
 
-    public Electrodomestico(double precio_base, String color, char consumo, double peso) {
+    public Electrodomestico(double precio_base, double peso, String color, char consumo ) {
         this.precio_base = precio_base;
         this.color = color;
         this.consumo = consumo;
