@@ -40,6 +40,7 @@ public class Electrodomestico {
         this.color = color;
         this.consumo = consumo;
         this.peso = peso;
+        this.comprobarConsumoEnergetico(consumo);
     }
 
     public double getPrecio_base() {
@@ -63,11 +64,12 @@ public class Electrodomestico {
         return "Electrodomestico{" + "precio_base=" + precio_base + ", color=" + color + ", consumo=" + consumo + ", peso=" + peso + '}';
     }
 
-    public void comprobarConsumoEnergetico(char consumo) {
-        if (this.consumo == consumo) {
-            System.out.println("El consumo es de tipo " + consumo);
-        } else {
-            System.out.println("El consumo no es de tipo " + consumo);
+    private void comprobarConsumoEnergetico(char consumo) {
+        int consumInt=(int)consumo;
+        if(consumInt>=65 && consumInt<=70){
+            this.consumo=consumo;
+        }else{
+            this.consumo=Electrodomestico.CONSUMO;
         }
     }
 
