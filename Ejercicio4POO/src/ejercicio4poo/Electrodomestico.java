@@ -16,14 +16,14 @@ public class Electrodomestico {
     static final char CONSUMO = 'F';
     static final double PESO = 5;
 
-    private double precio_base;
-    private String color;
-    private char consumo;
+    double precio_base;
+    String color;
+    char consumo;
     private double peso;
 
     public Electrodomestico() {
         this.precio_base = PRECIO;
-        this.color = color;
+        this.color = COLOR;
         this.consumo = CONSUMO;
         this.peso = PESO;
     }

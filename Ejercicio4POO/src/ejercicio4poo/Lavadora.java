@@ -21,15 +21,13 @@ public class Lavadora extends Electrodomestico {
     }
 
   public Lavadora(double precio_base, double peso){
-        this(precio_base, peso, CONSUMO, COLOR, CARGA);
+        
     }
 
-    private Lavadora(double precio_base, double peso, char CONSUMO, String COLOR, int CARGA) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
   
     public Lavadora(){
-        this(PRECIO, PESO, CONSUMO, COLOR, CARGA);
+        
     }
 
     public int getCarga() {
@@ -42,6 +40,6 @@ public class Lavadora extends Electrodomestico {
             añadir+=50;
         }
   
-        return añadir;
+        return super.precio_base + añadir;
     }
 }
