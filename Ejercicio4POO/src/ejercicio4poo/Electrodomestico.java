@@ -11,8 +11,6 @@ package ejercicio4poo;
  */
 public class Electrodomestico {
 
- 
-
     static final double PRECIO = 100;
     static final String COLOR = "BLANCO";
     static final char CONSUMO = 'F';
@@ -66,24 +64,55 @@ public class Electrodomestico {
     }
 
     public void comprobarConsumoEnergetico(char consumo) {
-        if (this.consumo==consumo) {
-            System.out.println("El consumo es de tipo "+consumo);
-        }else{
-            System.out.println("El consumo no es de tipo "+consumo);
+        if (this.consumo == consumo) {
+            System.out.println("El consumo es de tipo " + consumo);
+        } else {
+            System.out.println("El consumo no es de tipo " + consumo);
         }
     }
-    
+
     public void comprobarColor(String color) {
         if (color.equals("BLANCO") || color.equals("NEGRO") || color.equals("ROJO") || color.equals("AZUL") || color.equals("GRIS")) {
             this.color = color;
-        }
-        else{
+        } else {
             this.color = COLOR;
         }
     }
-    
-    public void precioFinal(){
-        //aquí tendría que solucionar lo del equals con char
+
+    public double precioFinal() {
+        double añade = 0;
+        switch (consumo) {
+            case 'A':
+                añade += 100;
+                break;
+            case 'B':
+                añade += 80;
+                break;
+            case 'C':
+                añade += 60;
+                break;
+            case 'D':
+                añade += 50;
+                break;
+            case 'E':
+                añade += 30;
+                break;
+            case 'F':
+                añade += 10;
+                break;
+
+        }
+        if (peso >= 0 && peso < 19) {
+            añade += 10;
+        } else if (peso >= 20 && peso < 49) {
+            añade += 50;
+        } else if (peso >= 50 && peso <= 79) {
+            añade += 80;
+        } else if (peso >= 80) {
+            añade += 100;
+        }
+
+        return this.precio_base + añade;
     }
 
 }
