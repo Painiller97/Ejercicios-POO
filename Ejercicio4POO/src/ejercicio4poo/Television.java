@@ -40,6 +40,13 @@ public class Television extends Electrodomestico {
         return sintonizador;
     }
 
+    @Override
+    public String toString() {
+        return "Television{" + "pulgadas=" + pulgadas + ", sintonizador=" + sintonizador + '}';
+    }
+    
+    
+
     public double precioFinal() {
 
         double añadir = 0;
