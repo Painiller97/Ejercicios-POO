@@ -9,5 +9,12 @@
  * @author Pues4Aula4
  */
 public class Serie {
+    static final int TEMP = 3;
+    static final boolean ENTREGADO = false;
     
+    private String titulo;
+    private int temporadas;
+    private boolean entregado;
+    private String genero;
+    private String creador;
 }
