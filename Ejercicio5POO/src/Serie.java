@@ -1,17 +1,20 @@
+
+import ejercicio5poo.Entregable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Pues4Aula4
  */
-public class Serie {
+public class Serie implements Entregable {
+
     static final int TEMPORADA = 3;
     static final boolean ENTREGADO = false;
-    
+
     private String titulo;
     private int temporadas;
     private boolean entregado;
@@ -24,7 +27,7 @@ public class Serie {
         this.entregado = ENTREGADO;
         this.genero = genero;
         this.creador = creador;
-       
+
     }
 
     public Serie(String titulo, String creador) {
@@ -79,9 +82,34 @@ public class Serie {
     public String toString() {
         return "Serie{" + "titulo=" + titulo + ", temporadas=" + temporadas + ", entregado=" + entregado + ", genero=" + genero + ", creador=" + creador + '}';
     }
-    
-    
-    
-    
-    
+
+    public boolean entregar() {
+        entregado = true;
+        return entregado;
+    }
+
+    public boolean devolver() {
+        entregado = false;
+        return entregado;
+    }
+
+    public void isEntregado() {
+        if (entregado == true) {
+            System.out.println(" Está entregado ");
+        } else {
+            System.out.println(" No está entregado ");
+        }
+    }
+
+    public void compareTo(Object a) {
+        Serie serie = (Serie) a;
+        if (this.temporadas > serie.getTemporadas()) {
+            System.out.println(1);
+        } else if (this.temporadas < serie.getTemporadas()) {
+            System.out.println(-1);
+        } else {
+            System.out.println(0);
+        }
+    }
+
 }
