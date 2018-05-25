@@ -1,3 +1,6 @@
+
+import ejercicio5poo.Entregable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,7 +11,7 @@
  *
  * @author Pues4Aula4
  */
-public class Videojuego {
+public class Videojuego implements Entregable {
     static final int HORAS = 10;
     static final boolean ENTREGADO = false;
     
@@ -71,7 +74,36 @@ public class Videojuego {
         return "Videojuego{" + "titulo=" + titulo + ", horas=" + horas + ", entregado=" + entregado + ", genero=" + genero + ", compa\u00f1ia=" + compañia + '}';
     }
 
-    
+    public boolean entregar() {
+        entregado = true;
+        return entregado;
+    }
+
+    public boolean devolver() {
+        entregado = false;
+        return entregado;
+    }
+
+    public void isEntregado() {
+        if (entregado == true) {
+            System.out.println(" Está entregado ");
+        } else {
+            System.out.println(" No está entregado ");
+        }
+    }
+
+    public void compareTo(Object a) {
+        Videojuego juego = (Videojuego) a;
+        if (this.horas > juego.getHoras()) {
+            System.out.println(1);
+        } else if (this.horas < juego.getHoras()) {
+            System.out.println(-1);
+        } else {
+            System.out.println(0);
+        }
+    }
 
 }
+
+
 
