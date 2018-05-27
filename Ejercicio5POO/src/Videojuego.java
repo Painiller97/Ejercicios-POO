@@ -84,11 +84,13 @@ public class Videojuego implements Entregable {
         return entregado;
     }
 
-    public void isEntregado() {
+    public boolean isEntregado() {
         if (entregado == true) {
             System.out.println(" Está entregado ");
+            return true;
         } else {
             System.out.println(" No está entregado ");
+            return false;
         }
     }
 

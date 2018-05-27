@@ -12,6 +12,6 @@ package ejercicio5poo;
 public interface Entregable {
     public boolean entregar();
     public boolean devolver();
-    public void isEntregado();
+    public boolean isEntregado();
     public void compareTo(Object a);
 }
