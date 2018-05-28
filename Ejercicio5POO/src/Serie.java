@@ -94,7 +94,7 @@ public class Serie implements Entregable {
     }
 
     public boolean isEntregado() {
-     if (entregado == true) {
+        if (entregado == true) {
             System.out.println(" Está entregado ");
             return true;
         } else {
@@ -103,15 +103,15 @@ public class Serie implements Entregable {
         }
     }
 
-    public void compareTo(Object a) {
+    public int compareTo(Object a) {
         Serie serie = (Serie) a;
         if (this.temporadas > serie.getTemporadas()) {
-            System.out.println(1);
+            return 1;
         } else if (this.temporadas < serie.getTemporadas()) {
-            System.out.println(-1);
+            return -1;
         } else {
-            System.out.println(0);
+            return 0;
         }
     }
-
+    
 }
