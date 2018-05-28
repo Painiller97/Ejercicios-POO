@@ -50,4 +50,20 @@ public class Main {
         }
         System.out.println("Se han entregado " + contar + " series y videojuegos");
     }
+    
+    public Serie getMayorSerie(Serie listaseries[]){
+        Serie mayor = new Serie();
+       
+        for (int i = 0; i < listaseries.length-1; i++) {
+            if (listaseries[i].compareTo(listaseries[i+1])==1){
+                mayor = listaseries[i];
+            }
+            else{
+                mayor = listaseries[i+1];
+            }
+            i+=1; 
+        }
+        return null;
+    }
+    
 }
