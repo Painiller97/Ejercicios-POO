@@ -14,7 +14,7 @@ import ejercicio5poo.Entregable;
 public class Videojuego implements Entregable {
     static final int HORAS = 10;
     static final boolean ENTREGADO = false;
-    
+
     private String titulo;
     private int horas;
     private boolean entregado;
@@ -94,14 +94,14 @@ public class Videojuego implements Entregable {
         }
     }
 
-    public void compareTo(Object a) {
+    public int compareTo(Object a) {
         Videojuego juego = (Videojuego) a;
         if (this.horas > juego.getHoras()) {
-            System.out.println(1);
+            return +1;
         } else if (this.horas < juego.getHoras()) {
-            System.out.println(-1);
+            return -1;
         } else {
-            System.out.println(0);
+            return 0;
         }
     }
 
