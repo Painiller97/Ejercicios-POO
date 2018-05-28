@@ -16,10 +16,10 @@ public class Main {
     public static void main(String[] args) {
 
         Serie listaseries[] = new Serie[4];
-        listaseries[0] = new Serie("Evangelion", 3, "Mecha", "Hideaki Anno");
+        listaseries[0] = new Serie("Evangelion", 10, "Mecha", "Hideaki Anno");
         listaseries[1] = new Serie("Dragon Ball", "Akira Toriyama");
         listaseries[2] = new Serie();
-        listaseries[0] = new Serie("One Punch Man", 3, "Acción", "One");
+        listaseries[3] = new Serie("One Punch Man", 4, "Acción", "One");
 
         Videojuego listajuegos[] = new Videojuego[4];
         listajuegos[0] = new Videojuego("Minecraft", 200);
@@ -49,21 +49,25 @@ public class Main {
             }
         }
         System.out.println("Se han entregado " + contar + " series y videojuegos");
+        
+        System.out.println("El mayor serie es " + getMayorSerie(listaseries));
+    
+    
+    
     }
     
-    public Serie getMayorSerie(Serie listaseries[]){
+    public static Serie getMayorSerie(Serie listaseries[]){
         Serie mayor = new Serie();
        
         for (int i = 0; i < listaseries.length-1; i++) {
-            if (listaseries[i].compareTo(listaseries[i+1])==1){
+            if (listaseries[i].compareTo(listaseries[i+1])==+1){
                 mayor = listaseries[i];
             }
             else{
                 mayor = listaseries[i+1];
             }
-            i+=1; 
         }
-        return null;
+        return mayor;
     }
-    
+     
 }
