@@ -20,6 +20,10 @@ public class Serie implements Entregable {
     private boolean entregado;
     private String genero;
     private String creador;
+    
+    public static final int MAYOR = 1;
+    public static final int IGUAL = 0;
+    public static final int MENOR = -1;
 
     public Serie(String titulo, int temporadas, String genero, String creador) {
         this.titulo = titulo;
@@ -94,7 +98,7 @@ public class Serie implements Entregable {
     }
 
     public boolean isEntregado() {
-     if (entregado == true) {
+        if (entregado == true) {
             System.out.println(" Está entregado ");
             return true;
         } else {
@@ -103,15 +107,16 @@ public class Serie implements Entregable {
         }
     }
 
-    public void compareTo(Object a) {
+    public int compareTo(Object a) {
         Serie serie = (Serie) a;
         if (this.temporadas > serie.getTemporadas()) {
-            System.out.println(1);
+            return Serie.MAYOR;
         } else if (this.temporadas < serie.getTemporadas()) {
-            System.out.println(-1);
+            return Serie.MENOR;
         } else {
-            System.out.println(0);
+            return Serie.IGUAL;
         }
+        
     }
-
+    
 }
