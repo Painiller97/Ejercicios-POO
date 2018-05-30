@@ -16,8 +16,17 @@ public class Main {
      */
     public static void main(String[] args) {
         Libro libro1 = new Libro("164738498", "Harry Potter", "J.K. Rowling", 400);
-        Libro libro2 = new Libro("343454359", "Crónicas de la Torre", "Laura Gallego", 350);
+        System.out.println(libro1);
         
+        Libro libro2 = new Libro("343454359", "Crónicas de la Torre", "Laura Gallego", 350);
+        System.out.println(libro2);
+        
+        if(libro1.getPaginas() > libro2.getPaginas()){
+            System.out.println("El libro " + libro1.getTitulo() + " tiene más páginas");
+        }
+        else{
+            System.out.println("El libro " + libro2.getTitulo() + " tiene más páginas");
+        }
     }
     
 }
