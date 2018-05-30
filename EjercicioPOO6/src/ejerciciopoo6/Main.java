@@ -15,7 +15,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Libro libro1 = new Libro("164738498", "Harry Potter", "J.K. Rowling", 400);
+        Libro libro2 = new Libro("343454359", "Crónicas de la Torre", "Laura Gallego", 350);
+        
     }
     
 }
