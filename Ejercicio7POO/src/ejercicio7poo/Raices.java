@@ -10,6 +10,7 @@ package ejercicio7poo;
  * @author Pues4Aula4
  */
 public class Raices {
+
     private double a;
     private double b;
     private double c;
@@ -44,10 +45,27 @@ public class Raices {
         this.c = c;
     }
 
-    public double getDiscriminante(){
-        double discriminante = (this.b*this.b)-4*this.a*this.c;
-            return discriminante;    
-    }    
+    public double getDiscriminante() {
+        double discriminante = (this.b * this.b) - 4 * this.a * this.c;
+        return discriminante;
+    }
+
+    public boolean tieneRaices() {
+        boolean raices = false;
+        if (this.getDiscriminante() >= 0) {
+            raices = true;
+        }
+        return raices;
+    }
+    
+    public boolean tieneRaiz(){
+        boolean raiz = false;
+        if (this.getDiscriminante() < 0){
+            raiz = true;
+        }
+        return raiz;
+    }
     
     
+
 }
