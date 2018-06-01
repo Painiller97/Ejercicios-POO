@@ -78,6 +78,9 @@ public class Raices {
             )) / (2 * this.a);
             System.out.println("El segundo resulttado es " + s2);
         }
+        else{
+            System.out.println("No hay resultados disponibles.");
+        }
     }
 
     public void obtenerRaiz() {
@@ -86,6 +89,9 @@ public class Raices {
                     Math.pow(this.b, 2) - 4 * this.a * this.c
             )) / (2 * this.a);
             System.out.println("El resultado es " + s);
+        }
+        else{
+            System.out.println("No hay resultados disponibles.");
         }
     }
 }
