@@ -79,7 +79,7 @@ public class Raices {
             System.out.println("El segundo resulttado es " + s2);
         }
         else{
-            System.out.println("No hay resultados disponibles.");
+            System.out.println("No tiene 2 raices");
         }
     }
 
@@ -91,7 +91,7 @@ public class Raices {
             System.out.println("El resultado es " + s);
         }
         else{
-            System.out.println("No hay resultados disponibles.");
+            System.out.println("No tiene ninguna raiz");
         }
     }
 }
