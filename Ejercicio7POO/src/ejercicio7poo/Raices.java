@@ -44,6 +44,10 @@ public class Raices {
         this.c = c;
     }
 
+    public double getDiscriminante(){
+        double discriminante = (this.b*this.b)-4*this.a*this.c;
+            return discriminante;    
+    }    
     
     
 }
