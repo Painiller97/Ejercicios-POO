@@ -57,15 +57,35 @@ public class Raices {
         }
         return raices;
     }
-    
-    public boolean tieneRaiz(){
+
+    public boolean tieneRaiz() {
         boolean raiz = false;
-        if (this.getDiscriminante() < 0){
+        if (this.getDiscriminante() < 0) {
             raiz = true;
         }
         return raiz;
     }
-    
-    
 
+    public void obtenerRaices() {
+        if (this.tieneRaices() == true) {
+            double s1 = (-this.b + Math.sqrt(
+                    Math.pow(this.b, 2) - 4 * this.a * this.c
+            )) / (2 * this.a);
+            System.out.println("El primer resulttado es " + s1);
+
+            double s2 = (-this.b - Math.sqrt(
+                    Math.pow(this.b, 2) - 4 * this.a * this.c
+            )) / (2 * this.a);
+            System.out.println("El segundo resulttado es " + s2);
+        }
+    }
+
+    public void obtenerRaiz() {
+        if (this.tieneRaiz() == true) {
+            double s = (-this.b + Math.sqrt(
+                    Math.pow(this.b, 2) - 4 * this.a * this.c
+            )) / (2 * this.a);
+            System.out.println("El resultado es " + s);
+        }
+    }
 }
