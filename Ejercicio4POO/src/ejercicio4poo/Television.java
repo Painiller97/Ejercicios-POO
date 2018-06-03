@@ -17,8 +17,8 @@ public class Television extends Electrodomestico {
     private int pulgadas;
     private boolean sintonizador;
 
-    public Television(int pulgadas, boolean sintonizador, double precio_base, String color, char consumo, double peso) {
-        super(precio_base, color, consumo, peso);
+    public Television(int pulgadas, boolean sintonizador, double precio_base, double peso, String color, char consumo) {
+        super(precio_base, peso, color, consumo);
         this.pulgadas = pulgadas;
         this.sintonizador = sintonizador;
 
