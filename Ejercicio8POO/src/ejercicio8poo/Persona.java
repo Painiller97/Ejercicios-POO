@@ -13,13 +13,12 @@ public class Persona {
     private String nombre;
     private int edad;
     private String sexo;
-    private boolean asistencia;
 
-    public Persona(String nombre, int edad, String sexo, boolean asistencia) {
+    public Persona(String nombre, int edad, String sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        this.asistencia = asistencia;
+        
     }
 
     public String getNombre() {
@@ -46,17 +45,9 @@ public class Persona {
         this.sexo = sexo;
     }
 
-    public boolean isAsistencia() {
-        return asistencia;
-    }
-
-    public void setAsistencia(boolean asistencia) {
-        this.asistencia = asistencia;
-    }
-
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", asistencia=" + asistencia + '}';
+        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo +  '}';
     }
     
     
