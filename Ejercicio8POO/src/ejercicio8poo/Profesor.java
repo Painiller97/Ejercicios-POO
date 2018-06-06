@@ -10,11 +10,12 @@ package ejercicio8poo;
  * @author Daniel
  */
 public class Profesor extends Persona{
-    
+    public static final String[] ASIGNATURA={"Matematicas", "Filosofia", "Fisica"};
     private String materia;
     
     public Profesor(String materia, String nombre, int edad, String sexo, boolean asistencia) {
         super(nombre, edad, sexo);
+        this.materia=ASIGNATURA[MetodosSueltos.generarNumero(0,2)];
         this.materia=materia;
     }
     
