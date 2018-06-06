@@ -9,12 +9,13 @@ package ejercicio8poo;
  *
  * @author Daniel
  */
-public class Alumno extends Persona{
+public class Alumno extends Persona {
+
     private double nota;
 
     public Alumno(double nota, String nombre, int edad, String sexo, boolean asistencia) {
         super(nombre, edad, sexo);
-        this.nota=nota;
+        this.nota = nota;
     }
 
     public double getNota() {
@@ -24,6 +25,16 @@ public class Alumno extends Persona{
     public void setNota(double nota) {
         this.nota = nota;
     }
-    
-    
+
+    public void asiste() {
+
+        int falta = MetodosSueltos.generarNumero(0, 100);
+
+        if (falta < 50) {
+            super.setAsistencia(false);
+        } else {
+            super.setAsistencia(true);
+        }
+    }
+
 }

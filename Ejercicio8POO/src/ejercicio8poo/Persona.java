@@ -10,15 +10,31 @@ package ejercicio8poo;
  * @author Daniel
  */
 public class Persona {
+
+    public final String[] NOMBRESH = {"Juan", "Antonio", "Sergio"};
+    public final String[] NOMBRESM = {"Sara", "Clara", "Elena"};
+    public final int HOMBRE = 0;
+    public final int MUJER = 1;
+
     private String nombre;
     private int edad;
     private String sexo;
+    private boolean asistencia;
 
     public Persona(String nombre, int edad, String sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        
+
+        int generaSexo = MetodosSueltos.generarNumero(0, 1);
+
+        if (generaSexo == 0) {
+            this.nombre = NOMBRESH[MetodosSueltos.generarNumero(0, 3)];
+            this.sexo = "H";
+        } else {
+            nombre = NOMBRESM[MetodosSueltos.generarNumero(0, 3)];
+            sexo = "M";
+        }
     }
 
     public String getNombre() {
@@ -45,11 +61,17 @@ public class Persona {
         this.sexo = sexo;
     }
 
+    public boolean isAsistencia() {
+        return asistencia;
+    }
+
+    public void setAsistencia(boolean asistencia) {
+        this.asistencia = asistencia;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo +  '}';
+        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + '}';
     }
-    
-    
-    
+
 }
