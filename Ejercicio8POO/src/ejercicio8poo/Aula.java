@@ -12,14 +12,17 @@ package ejercicio8poo;
 public class Aula {
 
     public final String[] MATERIADESTINADA = {"Matematicas", "Filosofia", "Fisica"};
+    public final int MAXIMO = 30;
 
     private int identificador;
     private int maximo;
     private String destinada;
+    
+    
 
     public Aula(int identificador, int maximo, String destinada) {
         this.identificador = identificador;
-        this.maximo = maximo;
+        this.maximo = MAXIMO;
         this.destinada = MATERIADESTINADA[MetodosSueltos.generarNumero(0,3)];
     }
 
@@ -47,5 +50,16 @@ public class Aula {
         this.destinada = destinada;
     }
     
+    public boolean permitirClase(Profesor profesor){
+        
+        if(profesor.getMateria().equals(this.destinada) && profesor.asiste() == true && maximo > (maximo/2)){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+        
+    }
     
 }

@@ -29,8 +29,8 @@ public class Persona {
         int generaSexo = MetodosSueltos.generarNumero(0, 1);
 
         if (generaSexo == 0) {
-            this.nombre = NOMBRESH[MetodosSueltos.generarNumero(0, 3)];
-            this.sexo = "H";
+            nombre = NOMBRESH[MetodosSueltos.generarNumero(0, 3)];
+            sexo = "H";
         } else {
             nombre = NOMBRESM[MetodosSueltos.generarNumero(0, 3)];
             sexo = "M";

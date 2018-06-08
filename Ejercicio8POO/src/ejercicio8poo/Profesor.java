@@ -20,4 +20,28 @@ public class Profesor extends Persona {
         this.materia = materia;
     }
 
+    public Profesor(String nombre, int edad, String sexo) {
+        super(nombre, edad, sexo);
+    }
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+    
+    public boolean asiste() {
+
+        int falta = MetodosSueltos.generarNumero(0, 100);
+
+        if (falta < 20) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+
 }
