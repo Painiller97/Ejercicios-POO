@@ -5,6 +5,8 @@
  */
 package ejercicio8poo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Daniel
@@ -17,13 +19,15 @@ public class Aula {
     private int identificador;
     private int maximo;
     private String destinada;
-    
-    
+    private ArrayList<Alumno> alumnos;
+    private Profesor profe;
 
     public Aula(int identificador) {
         this.identificador = identificador;
         this.maximo = MAXIMO;
-        this.destinada = MATERIADESTINADA[MetodosSueltos.generarNumero(0,3)];
+        this.destinada = MATERIADESTINADA[MetodosSueltos.generarNumero(0, 2)];
+
+        this.alumnos = new ArrayList();
     }
 
     public int getIdentificador() {
@@ -49,20 +53,32 @@ public class Aula {
     public void setDestinada(String destinada) {
         this.destinada = destinada;
     }
-    
-    public boolean permitirClase(Profesor profesor){
+
+    public void permitirClase() {
         
-        if(profesor.getMateria().equals(this.destinada) && profesor.asiste() == true && maximo > (maximo/2)){
+        
+        if (profe.
+                getMateria().equals(this.destinada) 
+                && profe.asiste() && alumnos.size() > (maximo / 2)) {
             System.out.println("Se puede dar clase");
-            return true;
-            
-        }
-        else{
+
+        } else {
             System.out.println("No se puede dar clase");
-            return false;
         }
-        
-        
     }
-    
+
+    public void addAlumno(Alumno a) {
+
+        if (a.asiste()) {
+            this.alumnos.add(a);
+        }
+
+    }
+
+    public void setProfesor(Profesor p) {
+        this.profe = p;
+        if (p.asiste()) {
+            this.profe = p;;
+        }
+    }
 }

@@ -15,7 +15,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Alumno alumnos[] = new Alumno[9];
+        Alumno alumnos[] = new Alumno[10];
         alumnos[0] = new Alumno(8, 15);
         alumnos[1] = new Alumno(6, 16);
         alumnos[2] = new Alumno(3, 12);
@@ -30,7 +30,13 @@ public class Main {
         Profesor profesor = new Profesor(64);
         
         Aula aula = new Aula(1);
-        aula.permitirClase(profesor);
+        aula.setProfesor(profesor);
+        aula.addAlumno(alumnos[0]);
+        aula.addAlumno(alumnos[1]);
+        aula.addAlumno(alumnos[2]);
+        aula.addAlumno(alumnos[3]);
+        aula.addAlumno(alumnos[4]);
+        aula.permitirClase();
         
     }
     
