@@ -13,8 +13,8 @@ public class Alumno extends Persona {
 
     private double nota;
 
-    public Alumno(double nota, String nombre, int edad, String sexo, boolean asistencia) {
-        super(nombre, edad, sexo);
+    public Alumno(double nota, int edad) {
+        super(edad);
         this.nota = nota;
     }
 

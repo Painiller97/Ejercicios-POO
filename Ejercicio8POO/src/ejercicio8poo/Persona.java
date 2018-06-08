@@ -21,10 +21,9 @@ public class Persona {
     private String sexo;
     private boolean asistencia;
 
-    public Persona(String nombre, int edad, String sexo) {
-        this.nombre = nombre;
+    public Persona(int edad) {
         this.edad = edad;
-        this.sexo = sexo;
+        
 
         int generaSexo = MetodosSueltos.generarNumero(0, 1);
 

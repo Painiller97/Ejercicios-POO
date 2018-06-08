@@ -14,14 +14,14 @@ public class Profesor extends Persona {
     public static final String[] ASIGNATURA = {"Matematicas", "Filosofia", "Fisica"};
     private String materia;
 
-    public Profesor(String materia, String nombre, int edad, String sexo, boolean asistencia) {
-        super(nombre, edad, sexo);
+    public Profesor(String materia,int edad) {
+        super(edad);
         this.materia = ASIGNATURA[MetodosSueltos.generarNumero(0, 2)];
         this.materia = materia;
     }
 
-    public Profesor(String nombre, int edad, String sexo) {
-        super(nombre, edad, sexo);
+    public Profesor(int edad) {
+        super(edad);
     }
 
     public String getMateria() {
