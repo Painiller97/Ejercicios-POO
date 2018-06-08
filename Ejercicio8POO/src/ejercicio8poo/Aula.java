@@ -10,6 +10,9 @@ package ejercicio8poo;
  * @author Daniel
  */
 public class Aula {
+
+    public final String[] MATERIADESTINADA = {"Matematicas", "Filosofia", "Fisica"};
+
     private int identificador;
     private int maximo;
     private String destinada;
@@ -17,7 +20,7 @@ public class Aula {
     public Aula(int identificador, int maximo, String destinada) {
         this.identificador = identificador;
         this.maximo = maximo;
-        this.destinada = destinada;
+        this.destinada = MATERIADESTINADA[MetodosSueltos.generarNumero(0,3)];
     }
 
     public int getIdentificador() {

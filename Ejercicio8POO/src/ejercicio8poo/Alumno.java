@@ -31,7 +31,6 @@ public class Alumno extends Persona {
         return "Alumno{" + "nota=" + nota + '}';
     }
 
-    
     public void asiste() {
 
         int falta = MetodosSueltos.generarNumero(0, 100);
