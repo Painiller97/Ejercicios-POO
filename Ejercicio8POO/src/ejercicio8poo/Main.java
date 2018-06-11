@@ -37,6 +37,18 @@ public class Main {
         aula.addAlumno(alumnos[3]);
         aula.addAlumno(alumnos[4]);
         aula.permitirClase();
+        if (aula.permitirClase() == true){
+            System.out.println("Hay un total de " + alumnos.length + " estudiantes.");
+            
+            for (int i = 0; i <= alumnos.length; i++) {
+                if (alumnos[i].getNota() >= 5){
+                    System.out.println("El alumno " + alumnos[i].getNombre() + " ha aprobado con un " + alumnos[i].getNota());                    
+                }
+                else{
+                    System.out.println("El alumno " + alumnos[i].getNombre() + " ha suspendido con un " + alumnos[i].getNota());
+                }
+            }
+        }
         
     }
     
