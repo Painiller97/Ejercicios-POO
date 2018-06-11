@@ -57,14 +57,11 @@ public class Main {
     }
     
     public static Serie getMayorSerie(Serie listaseries[]){
-        Serie mayor = new Serie();
+        Serie mayor = listaseries[0];
        
-        for (int i = 0; i < listaseries.length-1; i++) {
-            if (listaseries[i].compareTo(listaseries[i+1])==+1){
+        for (int i = 1; i < listaseries.length; i++) {
+            if (listaseries[i].compareTo(mayor)==Serie.MAYOR){
                 mayor = listaseries[i];
-            }
-            else{
-                mayor = listaseries[i+1];
             }
         }
         return mayor;
