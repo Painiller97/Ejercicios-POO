@@ -16,12 +16,12 @@ public class Profesor extends Persona {
 
     public Profesor(String materia,int edad) {
         super(edad);
-        this.materia = ASIGNATURA[MetodosSueltos.generarNumero(0, 2)];
         this.materia = materia;
     }
 
     public Profesor(int edad) {
         super(edad);
+        this.materia = ASIGNATURA[MetodosSueltos.generarNumero(0, 2)];
     }
 
     public String getMateria() {
