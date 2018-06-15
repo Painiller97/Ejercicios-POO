@@ -14,6 +14,7 @@ public class Cine {
     private Pelicula pelicula;
     private double precioEntrada;
     private Asiento asientos[][];
+    private int limite_asientos;
 
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
@@ -22,7 +23,7 @@ public class Cine {
     public Cine(Pelicula pelicula, double precioEntrada) {
         this.pelicula = pelicula;
         this.precioEntrada = precioEntrada;
-        
+        this.limite_asientos=80;
         this.asientos = new Asiento[8][9];
         this.crearAsientos();
         this.imprimirAsientos();
@@ -74,5 +75,22 @@ public class Cine {
             }
             System.out.println("");
         }
+    }
+    
+    public void sentarEspectador(Espectador e){
+        Asiento asiento;
+        int vueltas=0;
+        do{
+            
+            asiento=this.asientos[MetodosSueltos.generarNumero(0, 7)][MetodosSueltos.generarNumero(0, 9)];
+            if(!asiento.isOcupado() && e.getDinero()>=this.precioEntrada && e.getEdad()>=this.pelicula.getEdadMinima()){
+                asiento.setOcupado(true);
+            }
+            vueltas++;
+            if(vueltas==this.limite_asientos){
+                System.out.println("todos los asientos ocupados");
+                break;
+            }
+        }while(asiento.isOcupado());      
     }
 }
