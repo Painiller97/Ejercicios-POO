@@ -26,7 +26,6 @@ public class Cine {
         this.limite_asientos=80;
         this.asientos = new Asiento[8][9];
         this.crearAsientos();
-        this.imprimirAsientos();
     }
 
     public Pelicula getPelicula() {
@@ -72,6 +71,7 @@ public class Cine {
                     System.out.print(Cine.ANSI_GREEN);
                 }
                 System.out.print(asiento.getEtiqueta()+" ");
+                System.out.print(Cine.ANSI_BLACK);
             }
             System.out.println("");
         }
@@ -80,17 +80,19 @@ public class Cine {
     public void sentarEspectador(Espectador e){
         Asiento asiento;
         int vueltas=0;
+        int i,j;
         do{
-            
-            asiento=this.asientos[MetodosSueltos.generarNumero(0, 7)][MetodosSueltos.generarNumero(0, 9)];
-            if(!asiento.isOcupado() && e.getDinero()>=this.precioEntrada && e.getEdad()>=this.pelicula.getEdadMinima()){
-                asiento.setOcupado(true);
-            }
             vueltas++;
-            if(vueltas==this.limite_asientos){
+            i=MetodosSueltos.generarNumero(0, 7);
+            j=MetodosSueltos.generarNumero(0, 8);
+            
+            if(!this.asientos[i][j].isOcupado()){
+                this.asientos[i][j].setOcupado(true);
+                break;
+            }else if(vueltas==this.limite_asientos){
                 System.out.println("todos los asientos ocupados");
                 break;
             }
-        }while(asiento.isOcupado());      
+        }while(true);      
     }
 }

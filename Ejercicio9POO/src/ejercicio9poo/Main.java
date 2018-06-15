@@ -17,6 +17,11 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Cine cine1= new Cine(new Pelicula("Deadpool2",120,16,"NPI"),9.80);
+        for (int i = 0; i < 45; i++) {
+            Espectador persona = new Espectador();
+            cine1.sentarEspectador(persona);
+        }
+        cine1.imprimirAsientos();
     }
     
 }
