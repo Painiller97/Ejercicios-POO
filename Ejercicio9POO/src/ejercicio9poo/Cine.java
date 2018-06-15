@@ -11,24 +11,28 @@ package ejercicio9poo;
  */
 public class Cine {
 
-    private String pelicula;
+    private Pelicula pelicula;
     private double precioEntrada;
-    private String asientos[][] = new String[7][8];
+    private Asiento asientos[][];
 
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLACK = "\u001B[30m";
 
-    public Cine(String pelicula, double precioEntrada) {
+    public Cine(Pelicula pelicula, double precioEntrada) {
         this.pelicula = pelicula;
         this.precioEntrada = precioEntrada;
+        
+        this.asientos = new Asiento[8][9];
+        this.crearAsientos();
+        this.imprimirAsientos();
     }
 
-    public String getPelicula() {
+    public Pelicula getPelicula() {
         return pelicula;
     }
 
-    public void setPelicula(String pelicula) {
+    public void setPelicula(Pelicula pelicula) {
         this.pelicula = pelicula;
     }
 
@@ -45,22 +49,30 @@ public class Cine {
         return "Cine{" + "pelicula=" + pelicula + ", precioEntrada=" + precioEntrada + '}';
     }
 
-    public static void crearAsientos() {
-        String asientos[][] = new String[10][10];
+    private void crearAsientos() {
         String col = "ABCDEFGHI";
-        for (int i = 1; i <= 8; i++) {
+        Asiento a;
+        for (int i = 0; i <= 7; i++) {
             for (int j = 0; j < col.length(); j++) {
-                asientos[i][j] = i + "" + col.charAt(j);
-                if(i%3==0){
-                    System.out.print(Cine.ANSI_GREEN);
-                }else if(i%2==0){
+                a=new Asiento(i+1 + "" + col.charAt(j),false);
+                this.asientos[i][j]=a;
+            }
+        }
+    }
+    
+    public void imprimirAsientos(){
+        Asiento asiento;
+        for (int i = 7; i >=0; i--) {
+            for (int j = 0; j < 9; j++) {
+                asiento=this.asientos[i][j];
+                if(asiento.isOcupado()){
                     System.out.print(Cine.ANSI_RED);
+                }else{
+                    System.out.print(Cine.ANSI_GREEN);
                 }
-                System.out.print(asientos[i][j] + " ");
-                System.out.print(Cine.ANSI_BLACK);
+                System.out.print(asiento.getEtiqueta()+" ");
             }
             System.out.println("");
         }
-
     }
 }
