@@ -42,5 +42,25 @@ public class Baraja {
         }
 
     }
+    
+    public void barajar() {
+ 
+        int random = 0;
+        Carta cart;
+ 
+        //Recorro las cartas
+        for (int i = 0; i < carta.length; i++) {
+ 
+            random = MetodosSueltos.generarNumero(0, CARTAS - 1);
+ 
+            cart = carta[i];
+            carta[i] = carta[random];
+            carta[random] = cart;
+ 
+        }
+ 
+ 
+    }
+ 
 
 }
