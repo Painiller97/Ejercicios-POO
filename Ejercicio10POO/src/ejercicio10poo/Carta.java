@@ -1,0 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio10poo;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Carta {
+    public final int[] NUMEROS = {1, 2, 3, 4, 5, 6, 7, 10, 11, 12};
+    public final String[] PALOS = {"Bastos", "Copas", "Espadas", "Oros"};
+    
+    private int numero;
+    private String palo;
+    
+}
