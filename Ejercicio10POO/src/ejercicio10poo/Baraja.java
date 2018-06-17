@@ -10,8 +10,9 @@ package ejercicio10poo;
  * @author Daniel
  */
 public class Baraja {
+
     public static final int CARTAS = 40;
-    
+
     private Carta carta[];
     private int cartaSiguiente;
 
@@ -19,8 +20,27 @@ public class Baraja {
         this.carta = new Carta[CARTAS];
         this.cartaSiguiente = 0;
     }
- 
-    
-    
-    
+
+    private void crearBaraja() {
+
+        String[] palos = Carta.PALOS;
+
+        for (int i = 0; i < palos.length; i++) {
+
+            for (int j = 0; j < 12; j++) {
+
+                if (!(j == 7 || j == 8)) {
+                    if (j >= 9) {
+                        carta[((i * (12 - 2)) + (j - 2))] = new Carta(j + 1, palos[i]);
+                    } else {
+                        carta[((i * (12 - 2)) + j)] = new Carta(j + 1, palos[i]);
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
 }
