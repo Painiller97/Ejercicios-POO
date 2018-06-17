@@ -13,8 +13,8 @@ public class Alumno extends Persona {
 
     private double nota;
 
-    public Alumno(double nota, String nombre, int edad, String sexo, boolean asistencia) {
-        super(nombre, edad, sexo);
+    public Alumno(double nota, int edad) {
+        super(edad);
         this.nota = nota;
     }
 
@@ -31,15 +31,14 @@ public class Alumno extends Persona {
         return "Alumno{" + "nota=" + nota + '}';
     }
 
-    
-    public void asiste() {
+    public boolean asiste() {
 
         int falta = MetodosSueltos.generarNumero(0, 100);
 
         if (falta < 50) {
-            super.setAsistencia(false);
+            return false;
         } else {
-            super.setAsistencia(true);
+            return true;
         }
     }
 

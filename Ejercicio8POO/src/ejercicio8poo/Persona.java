@@ -21,18 +21,17 @@ public class Persona {
     private String sexo;
     private boolean asistencia;
 
-    public Persona(String nombre, int edad, String sexo) {
-        this.nombre = nombre;
+    public Persona(int edad) {
         this.edad = edad;
-        this.sexo = sexo;
+        
 
         int generaSexo = MetodosSueltos.generarNumero(0, 1);
 
         if (generaSexo == 0) {
-            this.nombre = NOMBRESH[MetodosSueltos.generarNumero(0, 3)];
-            this.sexo = "H";
+            nombre = NOMBRESH[MetodosSueltos.generarNumero(0, 2)];
+            sexo = "H";
         } else {
-            nombre = NOMBRESM[MetodosSueltos.generarNumero(0, 3)];
+            nombre = NOMBRESM[MetodosSueltos.generarNumero(0, 2)];
             sexo = "M";
         }
     }
