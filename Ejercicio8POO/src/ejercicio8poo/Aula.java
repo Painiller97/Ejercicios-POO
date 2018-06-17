@@ -10,6 +10,8 @@ package ejercicio8poo;
  * @author Daniel
  */
 public class Aula {
+    private final int MAXIMO=20;
+    
     private int identificador;
     private int maximo;
     private String destinada;
