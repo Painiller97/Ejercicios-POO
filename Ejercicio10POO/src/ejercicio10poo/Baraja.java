@@ -50,8 +50,8 @@ public class Baraja {
         return this.cartas.pop();
     }
 
-    public Enumeration<Carta> cartasDisponibles() {
-        return this.cartas.elements();
+    public int cartasDisponibles() {
+        return this.cartas.size();
     }
     
     public Stack<Carta> darCartas(int pedidas){
