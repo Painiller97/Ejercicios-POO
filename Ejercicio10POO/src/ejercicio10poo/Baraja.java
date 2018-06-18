@@ -21,27 +21,5 @@ public class Baraja {
         this.cartas = new Stack<Carta>();
     }
 
-    private void crearBaraja() {
-
-        String[] palos = Carta.PALOS;
-
-        for (int i = 0; i < palos.length; i++) {
-
-            for (int j = 0; j < 12; j++) {
-
-            }
-
-        }
-
-    }
-
-    public void barajar() {
-
-        }
-
-  
-    public void siguienteCarta(){
-        
-    }
     
 }
