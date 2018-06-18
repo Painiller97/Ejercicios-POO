@@ -7,6 +7,7 @@ package ejercicio10poo;
 
 import java.util.Enumeration;
 import java.util.Stack;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -51,5 +52,20 @@ public class Baraja {
 
     public Enumeration<Carta> cartasDisponibles() {
         return this.cartas.elements();
+    }
+    
+    public Stack<Carta> darCartas(int pedidas){
+        Stack<Carta> aDevolver = null;
+        
+        if (this.cartas.size()< pedidas) {
+            System.out.println("No hay suficientes cartas");
+        }else{
+            aDevolver = new Stack<Carta>();
+            for (int i = 0; i < pedidas; i++) {
+                aDevolver.push(this.cartas.pop());
+            }
+        }
+        
+        return aDevolver;
     }
 }
