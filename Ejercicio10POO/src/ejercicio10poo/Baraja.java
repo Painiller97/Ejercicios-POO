@@ -21,5 +21,21 @@ public class Baraja {
         this.cartas = new Stack<Carta>();
     }
 
+    public void crearBaraja(){
+        int numero;
+        String palo;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 10; j++) {
+                palo = Carta.PALOS[MetodosSueltos.generarNumero(0, 3)];
+                numero =  Carta.NUMEROS[MetodosSueltos.generarNumero(0, 9)];
+                    Carta a = new Carta(numero, palo);
+                    this.cartas.push(a);
+            }
+        }
+    }
+    
+    public void barajar(){
+        
+    }
     
 }
