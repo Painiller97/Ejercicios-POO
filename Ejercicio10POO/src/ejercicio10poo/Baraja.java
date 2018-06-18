@@ -35,7 +35,15 @@ public class Baraja {
     }
     
     public void barajar(){
+        int random = 0;
+        for (int i = 0; i < 40; i++) {
+            random = MetodosSueltos.generarNumero(0, 39);
+            this.cartas.get(random);
+            this.cartas.remove(random);
+            this.cartas.push(this.cartas.get(random));
+        }
+    }
+    public void siguienteCarta(){
         
     }
-    
 }
