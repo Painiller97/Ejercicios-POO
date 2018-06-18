@@ -23,7 +23,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "Carta{" + "NUMEROS=" + NUMEROS + ", PALOS=" + PALOS + ", numero=" + numero + ", palo=" + palo + '}';
+        return "Carta{" + "numero=" + numero + ", palo=" + palo + '}';
     }
 
     public int getNumero() {
