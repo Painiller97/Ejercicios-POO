@@ -5,6 +5,8 @@
  */
 package ejercicio10poo;
 
+import java.util.Stack;
+
 /**
  *
  * @author Daniel
@@ -13,12 +15,10 @@ public class Baraja {
 
     public static final int CARTAS = 40;
 
-    private Carta carta[];
-    private int cartaSiguiente;
+    private Stack<Carta> cartas;
 
     public Baraja() {
-        this.carta = new Carta[CARTAS];
-        this.cartaSiguiente = 0;
+        this.cartas = new Stack<Carta>();
     }
 
     private void crearBaraja() {
@@ -29,38 +29,19 @@ public class Baraja {
 
             for (int j = 0; j < 12; j++) {
 
-                if (!(j == 7 || j == 8)) {
-                    if (j >= 9) {
-                        carta[((i * (12 - 2)) + (j - 2))] = new Carta(j + 1, palos[i]);
-                    } else {
-                        carta[((i * (12 - 2)) + j)] = new Carta(j + 1, palos[i]);
-                    }
-
-                }
             }
 
         }
 
     }
-    
-    public void barajar() {
- 
-        int random = 0;
-        Carta cart;
- 
-        //Recorro las cartas
-        for (int i = 0; i < carta.length; i++) {
- 
-            random = MetodosSueltos.generarNumero(0, CARTAS - 1);
- 
-            cart = carta[i];
-            carta[i] = carta[random];
-            carta[random] = cart;
- 
-        }
- 
- 
-    }
- 
 
+    public void barajar() {
+
+        }
+
+  
+    public void siguienteCarta(){
+        
+    }
+    
 }
