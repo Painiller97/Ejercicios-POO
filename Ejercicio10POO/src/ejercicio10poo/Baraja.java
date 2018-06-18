@@ -43,7 +43,7 @@ public class Baraja {
             this.cartas.push(this.cartas.get(random));
         }
     }
-    public void siguienteCarta(){
-        
+    public Carta siguienteCarta(){
+        return this.cartas.pop();
     }
 }
