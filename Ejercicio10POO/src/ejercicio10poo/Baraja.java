@@ -91,5 +91,14 @@ public class Baraja {
             this.printStackCartas(this.cartasfuera);
         }
         
+}
+ public void mostrarBaraja(){
+        if(this.cartas.size()==0){
+            System.out.println("No ha salido ninguna carta");
+        }else{
+            System.out.println("Cartas que ya han salido");
+            this.printStackCartas(this.cartas);
+        }
+        
     }
 }
