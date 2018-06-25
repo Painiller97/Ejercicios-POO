@@ -15,14 +15,47 @@ public class Jugador implements PorraFutbol {
     
     private double dinero;
     private String nombre;
-    private boolean partido;
     private boolean decision;
 
-    public Jugador(boolean partido, boolean decision) {
+    public Jugador() {
         this.dinero = DINERO;
         this.nombre = NOMBRES[MetodosSueltos.generarNumero(0, 3)];
-        this.partido = partido;
+        int decisionVictoria = MetodosSueltos.generarNumero(0, 1);
+
+        if (decisionVictoria == 0){ 
+            decision = true;
+        } else {
+            decision = false;
+        }
+    }
+
+    public double getDinero() {
+        return dinero;
+    }
+
+    public void setDinero(double dinero) {
+        this.dinero = dinero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public boolean isDecision() {
+        return decision;
+    }
+
+    public void setDecision(boolean decision) {
         this.decision = decision;
+    }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "DINERO=" + DINERO + ", NOMBRES=" + NOMBRES + ", dinero=" + dinero + ", nombre=" + nombre + ", decision=" + decision + '}';
     }
     
     
