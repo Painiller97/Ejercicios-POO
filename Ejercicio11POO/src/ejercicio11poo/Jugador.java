@@ -59,7 +59,13 @@ public class Jugador implements PorraFutbol {
     }
 
     public void ponerDinero() {
-        
+        if (this.dinero > 1){
+            this.dinero -= 1;
+            Bote.total += 1;
+        }
+        else{
+            System.out.println(this.nombre + " no tiene suficiente dinero para apostar.");
+        }
     }
 
     @Override
