@@ -77,7 +77,7 @@ public class Jugador implements PorraFutbol {
                 Bote.ganado = true;
             }
             else{
-                System.out.println("El jugador " + this.nombre + " ha acertado.");
+                System.out.println("El jugador " + this.nombre + " ha fallado.");
             }
     }
         else{
