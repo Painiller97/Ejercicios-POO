@@ -11,5 +11,5 @@ package ejercicio11poo;
  */
 public interface PorraFutbol {
     public void ponerDinero();
-    public void empezarPorra();
+    public void empezarPorra(Partido p);
 }

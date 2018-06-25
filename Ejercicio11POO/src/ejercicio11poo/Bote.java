@@ -10,10 +10,16 @@ package ejercicio11poo;
  * @author Alumno
  */
 public class Bote {
+    public final double TOTAL = 0;
+    public final boolean GANADO = false;
+    
+    public static boolean ganado;
     public static double total;
 
-    public Bote(double total) {
-        total = 0;
+    public Bote() {
+        this.total = TOTAL;
+        this.ganado = GANADO;
+        
     }
     
     

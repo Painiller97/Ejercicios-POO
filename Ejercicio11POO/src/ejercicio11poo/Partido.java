@@ -22,6 +22,15 @@ public class Partido {
         }
     }
 
+    public boolean isVictoria() {
+        return victoria;
+    }
+
+    public void setVictoria(boolean victoria) {
+        this.victoria = victoria;
+    }
+    
+
     @Override
     public String toString() {
         return "Partido{" + "victoria=" + victoria + '}';

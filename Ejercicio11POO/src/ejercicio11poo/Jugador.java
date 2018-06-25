@@ -68,11 +68,22 @@ public class Jugador implements PorraFutbol {
         }
     }
 
-    @Override
-    public void empezarPorra() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    public void empezarPorra(Partido p) {
+        if (Bote.ganado == false){
+            if(this.decision == p.isVictoria()){
+                System.out.println("El jugador " + this.nombre + " ha acertado.");
+                this.dinero = dinero + Bote.total;
+                Bote.ganado = true;
+            }
+            else{
+                System.out.println("El jugador " + this.nombre + " ha acertado.");
+            }
+    }
+        else{
+            System.out.println("El bote ya ha sido ganado");
+        }
+    }
     
     
 }
