@@ -57,6 +57,15 @@ public class Jugador implements PorraFutbol {
     public String toString() {
         return "Jugador{" + "DINERO=" + DINERO + ", NOMBRES=" + NOMBRES + ", dinero=" + dinero + ", nombre=" + nombre + ", decision=" + decision + '}';
     }
+
+    public void ponerDinero() {
+        
+    }
+
+    @Override
+    public void empezarPorra() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

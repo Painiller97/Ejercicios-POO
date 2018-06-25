@@ -9,7 +9,12 @@ package ejercicio11poo;
  *
  * @author Alumno
  */
-public interface PorraFutbol {
-    public void ponerDinero();
-    public void empezarPorra();
+public class Bote {
+    public static double total;
+
+    public Bote(double total) {
+        total = 0;
+    }
+    
+    
 }
