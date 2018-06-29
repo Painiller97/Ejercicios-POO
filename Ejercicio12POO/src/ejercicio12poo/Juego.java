@@ -43,7 +43,7 @@ public class Juego {
     }
     
     public boolean finJuego(){
-        if (revolver.disparar() == true){
+        if (revolver.disparar()){
             return true;
         }
         else{
@@ -51,7 +51,7 @@ public class Juego {
         }
     }
      public void ronda(Jugador j){
-        j = new Jugador(1);
+        j = new Jugador(j.getId());
         j.disparar(revolver);
         if (j.isVivo()){
             revolver.siguienteBala();
