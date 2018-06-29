@@ -31,7 +31,11 @@ public class Comercial extends Empleado{
         return "Comercial{" + "comision=" + comision + '}';
     }
 
-    
+    public void darPlus(){
+        if(edad > 30 && comision > 200){
+            salario = salario + PLUS;
+        }
     }
+}
     
   

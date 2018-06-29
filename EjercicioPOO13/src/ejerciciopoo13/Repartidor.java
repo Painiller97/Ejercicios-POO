@@ -30,6 +30,13 @@ public class Repartidor extends Empleado{
     public String toString() {
         return "Repartidor{" + "zona=" + zona + '}';
     }
+
+    @Override
+    public void darPlus() {
+       if(edad > 25 && zona.equals("zona 3")){
+           salario = salario + PLUS;
+       }
+    }
     
     
 }

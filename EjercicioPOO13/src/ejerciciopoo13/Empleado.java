@@ -9,12 +9,12 @@ package ejerciciopoo13;
  *
  * @author Alumno
  */
-public class Empleado {
-    public final double PLUS = 300;
+public abstract class Empleado {
+    public final int PLUS = 300;
     
-    private String nombre;
-    private int edad;
-    private double salario;
+    protected String nombre;
+    protected int edad;
+    protected double salario;
 
     public Empleado(String nombre, int edad, double salario) {
         this.nombre = nombre;
@@ -51,6 +51,6 @@ public class Empleado {
         return "Empleado{" + "PLUS=" + PLUS + ", nombre=" + nombre + ", edad=" + edad + ", salario=" + salario + '}';
     }
 
-    
+    public abstract void darPlus();
     
 }
