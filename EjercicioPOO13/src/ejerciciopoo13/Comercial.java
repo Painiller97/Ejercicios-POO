@@ -18,8 +18,20 @@ public class Comercial extends Empleado{
         this.comision = comision;
     }
 
+    public double getComision() {
+        return comision;
+    }
+
+    public void setComision(double comision) {
+        this.comision = comision;
+    }
+
+    @Override
+    public String toString() {
+        return "Comercial{" + "comision=" + comision + '}';
+    }
+
     
     }
     
-    
-}
+  
