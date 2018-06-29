@@ -47,6 +47,12 @@ public class NoPerecederos extends Productos{
     public String toString() {
         return "NoPerecederos{" + "tipo=" + tipo + '}';
     }
+
+    @Override
+    public void calcular(double numProductos) {
+        numProductos = 4;
+        double calculo = precio * numProductos;
+    }
     
     
 }

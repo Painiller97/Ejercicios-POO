@@ -39,6 +39,6 @@ public abstract class Productos {
         return "Productos{" + "nombre=" + nombre + ", precio=" + precio + '}';
     }
     
-    
+    public abstract void calcular(double numProductos); 
     
 }

@@ -46,6 +46,20 @@ public class Perecedero extends Productos{
     public String toString() {
         return "Perecedero{" + "diasCaducar=" + diasCaducar + '}';
     }
+
+    
+    public void calcular(double numProductos) {
+        double calculo = precio * numProductos;
+        if(diasCaducar == 3){
+            calculo = calculo / 2;
+        }
+        else if(diasCaducar == 2){
+            calculo = calculo / 3;
+        }
+        else if(diasCaducar == 1){
+            calculo = calculo / 4;
+        }
+    }
     
     
     
