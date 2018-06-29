@@ -55,11 +55,8 @@ public class Revolver {
     
     public void siguienteBala() {
  
-        if (posActual == 6) {
-            posActual = 1; 
-        } else {
-            posActual++;
-        }
+        posBala = MetodosSueltos.generarNumero(0,5);
+        posActual = MetodosSueltos.generarNumero(0, 5);
  
     }
  
