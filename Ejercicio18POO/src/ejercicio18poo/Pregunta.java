@@ -16,9 +16,9 @@ public class Pregunta {
     private Opcion opcionCorrecta;
     private int puntos;
 
-    public Pregunta(String pregunta, Opcion[] opciones, Opcion opcionCorrecta, int puntos) {
+    public Pregunta(String pregunta, Opcion opciones[], Opcion opcionCorrecta, int puntos) {
         this.pregunta = pregunta;
-        this.opciones = opciones;
+        this.opciones[] = new opciones[3];
         this.opcionCorrecta = opcionCorrecta;
         this.puntos = puntos;
     }
