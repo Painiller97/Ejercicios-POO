@@ -14,6 +14,12 @@ public class Opcion {
     private String textoOpcion;
     private boolean correcto;
 
+    public Opcion(String textoOpcion, boolean correcto) {
+        this.textoOpcion = textoOpcion;
+        this.correcto = correcto;
+    }
+
+    
     public String getTextoOpcion() {
         return textoOpcion;
     }
