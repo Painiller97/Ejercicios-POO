@@ -5,6 +5,8 @@
  */
 package ejercicio17poo;
 
+import java.util.Stack;
+
 /**
  *
  * @author Alumno
@@ -17,7 +19,32 @@ public class BarajaEspañola extends Baraja {
         this.jugar = jugar;
     }
 
-    @Override
+    public boolean isJugar() {
+        return jugar;
+    }
+
+    public void setJugar(boolean jugar) {
+        this.jugar = jugar;
+    }
+
+    public Stack<Carta> getCartas() {
+        return cartas;
+    }
+
+    public void setCartas(Stack<Carta> cartas) {
+        this.cartas = cartas;
+    }
+
+    public Stack<Carta> getCartasfuera() {
+        return cartasfuera;
+    }
+
+    public void setCartasfuera(Stack<Carta> cartasfuera) {
+        this.cartasfuera = cartasfuera;
+    }
+    
+
+   
     public void crearBaraja() {
         int numero;
         String palo;
