@@ -28,7 +28,6 @@ public abstract class Baraja {
 
     public abstract void crearBaraja();
 
-
     public void barajar() {
         int random = 0;
         for (int i = 0; i < 40; i++) {
@@ -48,47 +47,51 @@ public abstract class Baraja {
     public int cartasDisponibles() {
         return this.cartas.size();
     }
-    
-    public Stack<Carta> darCartas(int pedidas){
+
+    public Stack<Carta> darCartas(int pedidas) {
         Stack<Carta> aDevolver = null;
-        
-        if (this.cartas.size()< pedidas) {
+
+        if (this.cartas.size() < pedidas) {
             System.out.println("No hay suficientes cartas");
-        }else{
+        } else {
             aDevolver = new Stack<Carta>();
             for (int i = 0; i < pedidas; i++) {
                 aDevolver.push(siguienteCarta());
             }
         }
-        
+
         return aDevolver;
     }
-    
-    private void printStackCartas(Stack<Carta> cartas){
+
+    private void printStackCartas(Stack<Carta> cartas) {
         Iterator<Carta> ite = cartas.iterator();
-        
-        while(ite.hasNext()){
-            Carta c= ite.next();
+
+        while (ite.hasNext()) {
+            Carta c = ite.next();
             System.out.println(c);
         }
     }
-    
-    public void cartasMonton(){
-        if(this.cartasfuera.size()==0){
+
+    public void cartasMonton() {
+        if (this.cartasfuera.size() == 0) {
             System.out.println("No ha salido ninguna carta");
-        }else{
+        } else {
             System.out.println("Cartas que ya han salido");
             this.printStackCartas(this.cartasfuera);
         }
-        
-}
- public void mostrarBaraja(){
-        if(this.cartas.size()==0){
+
+    }
+
+    public void mostrarBaraja() {
+        if (this.cartas.size() == 0) {
             System.out.println("No ha salido ninguna carta");
-        }else{
+        } else {
             System.out.println("Cartas que ya han salido");
             this.printStackCartas(this.cartas);
         }
-        
+
     }
+    
+    @Override
+    public abstract String toString();
 }

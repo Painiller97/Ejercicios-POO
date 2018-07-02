@@ -67,4 +67,10 @@ public class BarajaEspañola extends Baraja {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "BarajaEspa\u00f1ola{" + "jugar=" + jugar + '}';
+    }
+    
 }

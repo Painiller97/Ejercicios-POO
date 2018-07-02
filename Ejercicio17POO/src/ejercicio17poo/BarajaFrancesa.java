@@ -44,4 +44,10 @@ public class BarajaFrancesa extends Baraja{
         }
     }
      
+    @Override
+    public String toString() {
+         return "BarajaFrancesa{" + "TOTAL=" + TOTAL + '}';
+        
+    }
+     
 }
